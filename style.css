@@ -11,10 +11,11 @@
 }
 .photo{
     position: relative;
-    width: 25%;
-    height: 60%;
-    margin-top: 8%;
+    width: 21%;
+    /* height: 60%; */
+    margin-top: 6%;
     margin-right: 6%;
+    margin-bottom: 2%;
     margin-left: 3%;
     border-radius: 50%;
     transition: 1s ease-in .5s;
@@ -45,6 +46,8 @@
     justify-content: center;
 }
 
+
+
 .description  h1{
     color: white;
     font-size: 4rem;
@@ -58,15 +61,17 @@
 
 
 #skills{
+    padding: 4rem;
+    margin-top: 2rem;
     position: relative;
-    height: 150vh;
+    /* height: 150vh; */
     width: 99vw;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius: 1rem;
     display: flex;
     /* display: grid; */
     flex-wrap: wrap;
-    background-color: rgba(0,0,0,0.3);
+    /* background-color: rgba(0,0,0,0.3); */
     justify-content: space-evenly;
 }
 
@@ -75,11 +80,37 @@
     width: 11rem;
     margin: 1.5rem;
     margin-right: 2rem;
-    padding: 1rem;
+    margin-bottom: 4rem;
+    padding: 3rem;
     padding-left: 1rem;
     transition: 1s .2s;
       /* border: 1px solid red; */
 }
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+        filter: blur(5px);
+       transform: translateX(-100%);
+    }
+    40% {
+        opacity: .7;
+        filter: blur(2px);
+       transform: translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+       transform: translateX(0);
+    }
+}
+.card-body ,.skill div i,img ,.project-title ,.skill-name{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+ }
+
+
 .skill div i{
     opacity: .7;
     transition: 1s ease-in;
@@ -161,7 +192,7 @@
 .major-project{
     position: relative;
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     /* border: 2px solid red; */
     
 }
